@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'users/new'
 
   root 'static_pages#home'
+  get  '/todo-list', to: "todo_lists#index"
   get    '/help',    to: 'static_pages#help'
   get  '/about',   to: 'static_pages#about'
   get  '/signup',  to: 'users#new'
@@ -22,6 +23,6 @@ resources :todo_lists do
   end
 end
   
-root "todo_lists#index"
+
 
 end
